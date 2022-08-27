@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mysql:
+    container_name: midb
+    image: mysql:8.0.30
+    volumes:
+       - ./sql-data/db:/var/lib/docker/volumes/data/_data
+       ports:
+        -'3306:3306'
+        hostname: VIP
+        environment:
+          MYSQL_DATABASE: 'mydatabase'
+          MYSQL_USER: 'user?dio'
+          MYSQL_PASSWORD: 'MyProjero.1'
+          MYSQL_ROOT_USER: 'Projeto.Dio'
+          MYSQL_ROOT_PASSWORD: '321.pass'
